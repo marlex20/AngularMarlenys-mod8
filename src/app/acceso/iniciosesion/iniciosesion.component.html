@@ -1,0 +1,45 @@
+<form #inicioForm="ngForm" (ngSubmit)="onEnviar()" novalidate>
+  <div class="modal-content">
+    <div class="text-center text-bg-rosa">
+      <h5 class="fs-3">Iniciar Sesión</h5>
+    </div>
+    <div class="modal-body">
+      <div class="container text-start">
+        <div class="row my-3">
+          <div class="col-3">
+            <label for="nombreUsuario" class="form-label">Usuario</label>
+          </div>
+          <div class="col-9">
+            <input
+              type="text"
+              class="form-control"
+              id="nombreusuario"
+              name="nombreusuario"
+              placeholder="ingrese usuario"
+              [(ngModel)]="nombreUsuario"
+              required
+            />
+          </div>
+          <div class="col-3">
+            <label for="password" class="form-label">Contraseña</label>
+          </div>
+          <div class="col-9">
+            <input
+              type="password"
+              class="form-control"
+              name="password"
+              id="password"
+              [(ngModel)]="password"
+              required
+            />
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer text-bg-rosa">
+        <button type="submit" class="btn btn-primary w-100">
+          Iniciar Sesión
+        </button>
+      </div>
+    </div>
+  </div>
+</form>

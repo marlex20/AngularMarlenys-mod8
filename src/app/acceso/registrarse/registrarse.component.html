@@ -1,0 +1,69 @@
+<form #registroForm="ngForm" (ngSubmit)="onEnviar($event)" novalidate>
+  <div class="modal-content">
+    <div class="text-center text-bg-rosa">
+      <h5 class="fs-3">Registrarse</h5>
+    </div>
+    <div class="modal-body">
+      <div class="container text-start">
+        <div class="row my-3">
+          <div class="col-3">
+            <label for="nombre" class="form-label">Nombre</label>
+          </div>
+          <div class="col-9 mb-2">
+            <input
+              type="text"
+              class="form-control"
+              id="nombre"
+              name="nombre"
+              [(ngModel)]="nombre"
+              required
+            />
+          </div>
+          <div class="col-3">
+            <label for="nombreUsuario" class="form-label">Usuario</label>
+          </div>
+          <div class="col-9 mb-2">
+            <input
+              type="text"
+              class="form-control"
+              id="nombreUsuario"
+              name="nombreUsuario"
+              [(ngModel)]="nombreUsuario"
+              required
+            />
+          </div>
+          <div class="col-3">
+            <label for="email" class="form-label">E-mail</label>
+          </div>
+          <div class="col-9 mb-2">
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="name@example.com"
+              [(ngModel)]="email"
+              required
+            />
+          </div>
+          <div class="col-3">
+            <label for="password" class="form-label">Contraseña</label>
+          </div>
+          <div class="col-9 mb-2">
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              name="password"
+              [(ngModel)]="password"
+              required
+            />
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer text-bg-rosa">
+        <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+      </div>
+    </div>
+  </div>
+</form>

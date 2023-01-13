@@ -1,0 +1,63 @@
+<form (ngSubmit)="onSubmitNetwork()" [formGroup]="redForm">
+  <div class="modal-content">
+    <div class="text-center text-bg-rosa">
+      <h5 class="fs-3">Redes Sociales</h5>
+    </div>
+    <div class="container text-start border-bottom border-3 mb-3">
+      <div class="row">
+        <div class="col-2 my-2">
+          <label for="logo" class="form-label">Logo de Red Social</label>
+        </div>
+        <div class="col-6 my-2">
+          <input
+            name="logo"
+            type="url"
+            formControlName="logo"
+            class="form-control"
+            id="logo"
+            placeholder="Ingresar URL del Logo"
+            required
+          />
+          <div
+          *ngIf="redForm.get('logo')?.touched && redForm.get('logo')?.errors?.['required']"
+          class="alert alert-danger"
+        >
+          Este campo es requerido
+        </div>
+        </div>
+        <div class="col-4 my-2"></div>
+        <div class="col-2 my-2">
+          <label for="name" class="form-label">URL</label>
+        </div>
+        <div class="col-6 my-2">
+          <input
+            name="name"
+            id="name"
+            type="url"
+            formControlName="name"
+            class="form-control"
+            id="name"
+            placeholder="Ingresar URL de su Red Social"
+            required
+          />
+          <div
+            *ngIf="redForm.get('name')?.touched && redForm.get('name')?.errors?.['required']"
+            class="alert alert-danger"
+          >
+            Este campo es requerido
+          </div>
+        </div>
+        <div class="col-4 my-2"></div>
+        <div class="modal-footer text-bg-rosa col-12 my-2">
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="redForm.invalid"
+          >
+            Agregar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

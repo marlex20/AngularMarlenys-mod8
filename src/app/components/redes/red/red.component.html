@@ -1,0 +1,30 @@
+<app-formured-agregar
+  *ngIf="hasRoute('/dashboard')"
+  (onAddNetwork)="addNetwork($event)"
+></app-formured-agregar>
+
+<li class="btn btn-ligth" *ngFor="let red of redList">
+  <a [attr.href]="red.name" target="_blank">
+    <img
+      class="logos"
+      [src]="red.logo"
+      width="22"
+      height="22"
+      fill="white"
+      viewBox="0 0 16 16"
+    />
+  </a>
+
+  <div *ngIf="hasRoute('/dashboard')" class="row pb-2 px-2">
+    <button type="button" class="btn btn-danger" (click)="deleteRedes(red.id)">
+      Eliminar
+    </button>
+    <button
+      type="button"
+      class="btn btn-primary"
+      routerLink="/formured-editar/{{ red.id }}"
+    >
+      Editar
+    </button>
+  </div>
+</li>

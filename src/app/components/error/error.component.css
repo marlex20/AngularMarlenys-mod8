@@ -1,0 +1,14 @@
+.error{
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-error{
+   width: 20%;
+}
+.cont-error{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

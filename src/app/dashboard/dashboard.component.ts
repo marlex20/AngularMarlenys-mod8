@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Projects } from '../Datas';
-import { PortfolioService } from '../servicio/portfolio.service';
+import { TokenService } from '../servicio/token.service';
 
 
 @Component({
@@ -9,14 +8,15 @@ import { PortfolioService } from '../servicio/portfolio.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  isLogged = false;
 
-  proyectos: Projects[] = [];
-
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private tokenService: TokenService) { }
 
   ngOnInit(): void {
-  }
-  agregarProyecto(proyecto: Projects):void{
-    this.proyectos.push(proyecto)
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
   }
 }

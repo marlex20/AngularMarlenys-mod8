@@ -1,9 +1,0 @@
-app-item-redes ul li a svg {
-  fill: currentColor !important;
-}
-html body app-root app-dashboard body.bg-rosa section div.container.text-center div.row div.col-10.py-2.bg-white.bg-opacity-75 div#myTabContent.tab-content div#redes-pane.tab-pane.fade.show.active app-redes app-formuredes app-item-redes ul li.btn.btn-ligth a svg.bi.bi-linkedin{
-  fill: currentColor !important;
-}
-#redes-pane > app-redes:nth-child(1) > app-formuredes:nth-child(1) > app-item-redes:nth-child(2) > ul:nth-child(1) > li:nth-child(1) > a:nth-child(1) > svg:nth-child(1){
-  fill: currentColor !important;
-}

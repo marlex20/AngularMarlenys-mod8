@@ -1,5 +1,6 @@
 .logo {
   width: 200px;
+  height: 80px;
   box-shadow: 0 0 5px blue;
 }
 .banner {
@@ -162,6 +163,7 @@ footer {
 }
 .btn-primary {
   background-color: #560e86!important;
+  padding: 0.4rem ;
 }
 body {
   background-image: url(../src/assets/images/cute.jpg);

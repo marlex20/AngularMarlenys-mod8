@@ -1,0 +1,48 @@
+<form  (ngSubmit)="onSubmitProject()" [formGroup]="proyectoForm">
+  <div class="modal-content">
+    <div class="text-center text-bg-rosa">
+      <h5 class="fs-3">Proyectos</h5>
+    </div>
+    <div class="container text-start">
+      <div class="row my-1">
+        <div class="col-6 col-sm-6 col-md-3 mb-2">
+          <label for="image" class="form-label">Imagen del Proyecto</label>
+        </div>
+        <div class="col-6 col-sm-6 col-md-9 mb-2">  
+          <input class="form-control" type="url" id="image" name="image" formControlName="image"> 
+        </div>
+        <div class="col-6 col-sm-6 col-md-3 mb-2">
+          <label for="name" class="form-label">Nombre del Proyecto</label>
+        </div> 
+        <div class="col-6 col-sm-6 col-md-9 mb-2">
+          <textarea class="form-control" type="text" id="name" rows="1" name="name" required formControlName="name"></textarea>
+          <div *ngIf="proyectoForm.get('name')?.touched && proyectoForm.get('name')?.errors?.['required']" class="alert alert-danger">Este campo es requerido</div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-3 mb-2">
+          <label for="date" class="form-label">Fecha de Realización</label>
+        </div>
+        <div class="col-6 col-sm-6 col-md-9 mb-2">
+          <textarea class="form-control" type="text" id="date" rows="1"  required name="date" formControlName="date"></textarea>
+          <div *ngIf="proyectoForm.get('date')?.touched && proyectoForm.get('date')?.errors?.['required']" class="alert alert-danger">Este campo es requerido</div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-3 mb-2">
+          <label for="description" class="form-label">Descripción del Proyecto</label>
+        </div>
+        <div class="col-6 col-sm-6 col-md-9 mb-2">
+          <textarea class="form-control" type="text" id="description" rows="1"  required name="description" formControlName="description"></textarea>
+          <div *ngIf="proyectoForm.get('description')?.touched && proyectoForm.get('description')?.errors?.['required']" class="alert alert-danger">Este campo es requerido</div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-3">
+          <label for="url" class="form-label">Enlace del Proyecto</label>
+        </div>
+        <div class="col-6 col-sm-6 col-md-9">
+          <textarea class="form-control" type="url" id="url" rows="1" required name="url" formControlName="url"></textarea>
+        <div *ngIf="proyectoForm.get('url')?.touched && proyectoForm.get('url')?.errors?.['required']" class="alert alert-danger">Este campo es requerido</div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer text-bg-rosa ">
+      <button type="submit" class="btn btn-primary" [disabled]="proyectoForm.invalid">Agregar</button>
+    </div>
+  </div>
+</form>

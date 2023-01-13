@@ -1,0 +1,56 @@
+<div class="row"*ngIf="persona && isLogged">
+  <div class="col-2"></div>
+  <div class="col-sm-8">
+<form  (ngSubmit)="onUpdate()"
+#infoForm="ngForm" novalidate 
+
+>
+  <div class="modal-content">
+    <div class="text-center text-bg-rosa">
+      <h5 class="fs-3">Información</h5>
+    </div>
+    <div class="container text-start">
+      <div class="row my-2">
+        <div class="col-3 my-2">
+          <label for="backImage" class="form-label" >Imagen de Banner</label>
+        </div>
+        <div class="col-7 my-2">
+          <input class="form-control" type="text" name="backImage" id="backImage" [(ngModel)]="persona.backImage" required>
+        </div>              
+        <div class="col-3 my-2">
+          <label for="photo" class="form-label">Fotografia de Perfil</label>
+        </div>
+        <div class="col-7 my-2">
+          <input class="form-control" type="url" name="photo" id="photo" [(ngModel)]="persona.photo" required>
+         </div>        
+        <div class="col-3 my-2">
+          <label for="title" class="form-label">Titulo del Portfolio</label>
+        </div>
+        <div class="col-7 my-2">
+          <input class="form-control" type="text" name="title" id="name" [(ngModel)]="persona.title" required>         
+        </div>              
+        <div class="col-3 my-2">
+          <label for="name" class="form-label">Nombre del Perfil</label>
+        </div>
+        <div class="col-7 my-2">
+          <input class="form-control" type="text" name="name" id="name" [(ngModel)]="persona.name" required>         
+        </div> 
+        
+        <div class="col-3 my-2">
+          <label for="about" class="form-label">Acerca de mi</label>
+        </div>
+        <div class="col-7 my-2">
+          <input class="form-control" type="text" name="about" id="about" [(ngModel)]="persona.about" required>
+          
+        </div> 
+      </div> 
+      <div class="col my-2 ">       
+        <button type="submit" class="btn btn-primary" >Actualizar</button>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+<div class="col-2"></div>
+</div>
+

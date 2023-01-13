@@ -1,0 +1,51 @@
+<div class="row" *ngIf="expRedes && isLogged">
+  <div class="col-2"></div>
+  <div class="col-sm-8">
+    <div class="modal-content">
+      <div class="text-center text-bg-rosa">
+        <h5 class="fs-3">Redes Sociales</h5>
+      </div>
+      <form (ngSubmit)="onUpdate()" #redForm="ngForm" novalidate>
+        <div class="container text-start border-bottom border-3 mb-3">
+          <div class="row">
+            <div class="col-2 my-2">
+              <label for="logo" class="form-label">Logo de Red Social</label>
+            </div>
+            <div class="col-6 my-2">
+              <input
+                name="logo"
+                id="name"
+                type="url"
+                [(ngModel)]="expRedes.logo"
+                class="form-control"
+                id="logo"
+                placeholder="Ingresar URL del Logo"
+                required
+              />
+            </div>
+            <div class="col-4 my-2"></div>
+            <div class="col-2 my-2">
+              <label for="name" class="form-label">URL</label>
+            </div>
+            <div class="col-6 my-2">
+              <input
+                name="name"
+                id="name"
+                type="url"
+                [(ngModel)]="expRedes.name"
+                class="form-control"
+                id="name"
+                placeholder="Ingresar URL de su Red Social"
+                required
+              />
+            </div>
+            <div class="col-4 my-2"></div>
+            <div class="modal-footer text-bg-rosa col-12 my-2">
+              <button type="submit" class="btn btn-primary">Actualizar</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

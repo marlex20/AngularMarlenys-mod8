@@ -1,49 +1,29 @@
 {
-  "name": [
+  "info": [
     {
       "id": 1,
-      "name": "Marlenys Palma"
-    }
-  ],
-  "backImage": [
-    {
-      "id": 1,
-      "backImage": "nuevo"
-    }
-  ],
-  "title": [
-    {
-      "id": 1,
-      "title": "Desarrollador Web Full Stack Jr"
-    }
-  ],
-  "photo": [
-    {
-      "id": 1,
-      "photo": "../assets/images/fotoCurriculo.png"
-    }
-  ],
-  "about": [
-    {
-      "id": 1,
+      "name": "Marlenys Palma",
+      "backImage": "nuevo",
+      "title": "Desarrollador Web Full Stack Jr",
+      "photo": "https://media.licdn.com/dms/image/C5603AQHvciDkVTfgoA/profile-displayphoto-shrink_200_200/0/1621622727149?e=1677715200&v=beta&t=SP6-f5NAM2-CpMhfIJjCJKXf1DkavgLOnLl_dH1iRzI",
       "about": "Profesional Autodidacta, dedicada 02 años incansables a la busqueda del conocimiento de la tecnologia para optimizar el rendimiento de los trabajos para lograr la excelencia"
     }
   ],
   "network": [
     {
       "id": 1,
-      "logo": "../assets/images/linkedin.svg",
+      "logo": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
       "name": "https://linkedin.com/in/marlenys-p-439891101"
     },
     {
       "id": 2,
       "name": "https://www.instagram.com/marlex_20",
-      "logo": "../assets/images/instagram.svg"
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png"
     },
     {
       "id": 3,
       "name": "https://twitter.com/marln_16",
-      "logo": "../assets/images/twitter.svg"
+      "logo": "https://i.pinimg.com/564x/4f/50/8c/4f508c71a45d9201f9e4a34e6ebedea0.jpg"
     }
   ],
   "experience": [

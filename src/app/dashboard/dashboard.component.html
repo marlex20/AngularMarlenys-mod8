@@ -1,7 +1,7 @@
-<body class="bg-rosa">
+<body class="bg-rosa" *ngIf="isLogged">
   <!--Navegación-->
   <section>
-  <!--cinta-->
+    <!--cinta-->
     <nav class="navbar nav-expand-lg bg-dark">
       <div class="container-fluid">
         <app-logo></app-logo>
@@ -11,46 +11,80 @@
       </div>
     </nav>
   </section>
-   <!-- Contenido de los Formularios -->
+  <!-- Contenido de los Formularios -->
   <section>
     <div class="container text-center">
       <div class="row">
-        <div class="col-1">
-        </div>
+        <div class="col-1"></div>
         <div class="col-10 py-2 bg-white bg-opacity-75">
           <!-- Links de los formularios -->
-            <app-formulista></app-formulista>
+          <app-formulista></app-formulista>
           <!--Secciones Editables-->
           <div class="tab-content" id="myTabContent">
             <!--Redes Sociales-->
-            <div class="tab-pane fade show active" id="redes-pane" role="tabpanel" aria-labelledby="redes" tabindex="0">
-              <app-item-redes></app-item-redes>
+            <div
+              class="tab-pane fade show active"
+              id="redes-pane"
+              role="tabpanel"
+              aria-labelledby="redes"
+              tabindex="0"
+            >
+              <app-red></app-red>
             </div>
             <!-- Banner -->
-            <div class="tab-pane fade" id="banner-pane" role="tabpanel" aria-labelledby="banner" tabindex="0">
-              <app-banner></app-banner>
+            <div
+              class="tab-pane fade"
+              id="banner-pane"
+              role="tabpanel"
+              aria-labelledby="banner"
+              tabindex="0"
+            >
+              <app-persona></app-persona>
             </div>
             <!-- Experiencia Laboral -->
-            <div class="tab-pane fade" id="laboral-pane" role="tabpanel" aria-labelledby="laboral" tabindex="0">
-            <app-item-experiencia></app-item-experiencia>
+            <div
+              class="tab-pane fade"
+              id="laboral-pane"
+              role="tabpanel"
+              aria-labelledby="laboral"
+              tabindex="0"
+            >
+              <app-experiencia></app-experiencia>
             </div>
             <!--Educación -->
-            <div class="tab-pane fade" id="educacion-pane" role="tabpanel" aria-labelledby="educacion" tabindex="0">
-            <app-item-formacion></app-item-formacion>
+            <div
+              class="tab-pane fade"
+              id="educacion-pane"
+              role="tabpanel"
+              aria-labelledby="educacion"
+              tabindex="0"
+            >
+              <app-educacion></app-educacion>
             </div>
             <!--Habilidades -->
-            <div class="tab-pane fade" id="habilidades-pane" role="tabpanel" aria-labelledby="habilidades" tabindex="0">
-              <app-item-habilidad></app-item-habilidad>
+            <div
+              class="tab-pane fade"
+              id="habilidades-pane"
+              role="tabpanel"
+              aria-labelledby="habilidades"
+              tabindex="0"
+            >
+              <app-habilidad></app-habilidad>
             </div>
             <!--Proyectos -->
-            <div class="tab-pane fade" id="proyectos-pane" role="tabpanel" aria-labelledby="proyectos" tabindex="0">
-              <app-item-proyecto></app-item-proyecto>
-            </div>  
+            <div
+              class="tab-pane fade"
+              id="proyectos-pane"
+              role="tabpanel"
+              aria-labelledby="proyectos"
+              tabindex="0"
+            >
+              <app-proyecto></app-proyecto>
+            </div>
           </div>
         </div>
-        <div class="col-1">
-        </div>
+        <div class="col-1"></div>
       </div>
     </div>
-  </section> 
-</body> 
+  </section>
+</body>

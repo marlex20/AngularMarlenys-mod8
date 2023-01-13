@@ -1,0 +1,49 @@
+<form  (ngSubmit)="onSubmitEducation()" [formGroup]="educacionForm">
+  <div class="modal-content">
+    <div class="text-center text-bg-rosa">
+      <h5 class="fs-3">Formación Academica</h5>
+    </div>
+    <div class="container text-start">
+      <div class="row my-1">
+        <div class="col-6 col-sm-6 col-md-3 mb-2">
+          <label for="image" class="form-label">Logo de la Institución</label>
+        </div>
+        <div class="col-6 col-sm-6 col-md-9 mb-2">
+          <input class="form-control" name="image" id="image" type="text" formControlName="image" required>
+        </div>
+        <div class="col-6 col-sm-6 col-md-3 mb-2">
+          <label for="name" class="form-label">Nombre de la Institución</label>
+        </div>
+        <div class="col-6 col-sm-6 col-md-9 mb-2">
+          <textarea class="form-control" name="name" id="name" type="text" rows="1" required formControlName="name" required></textarea>
+          <div *ngIf="educacionForm.get('name')?.touched && educacionForm.get('name')?.errors?.['required']" class="alert alert-danger">Este campo es requerido</div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-3 mb-2">
+          <label for="title" class="form-label">Titulo Obtenido</label>
+        </div>
+        <div class="col-6 col-sm-6 col-md-9 mb-2">
+          <textarea class="form-control" name="title" id="title" type="text" rows="1" required formControlName="title" required></textarea>
+          <div  *ngIf="educacionForm.get('title')?.touched && educacionForm.get('title')?.errors?.['required']" class="alert alert-danger">Este campo es requerido</div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-3 mb-2">
+          <label for="description" class="form-label">Descripción del Titulo</label>
+        </div>
+        <div class="col-6 col-sm-6 col-md-9 mb-2">
+          <textarea class="form-control" name="description" id="description" type="text" rows="1" required formControlName="description" required></textarea>
+          <div  *ngIf="educacionForm.get('description')?.touched && educacionForm.get('description')?.errors?.['required']" class="alert alert-danger">Este campo es requerido</div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-3">
+          <label for="date" class="form-label">Periodo</label>
+        </div>
+        <div class="col-6 col-sm-6 col-md-9">
+          <textarea class="form-control"  name="date" id="date" type="text" rows="1" required formControlName="date" required></textarea>
+          <div  *ngIf="educacionForm.get('date')?.touched && educacionForm.get('date')?.errors?.['required']" class="alert alert-danger">Este campo es requerido</div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer text-bg-rosa ">
+      <button type="submit" class="btn btn-primary" [disabled]="educacionForm.invalid">Agregar</button>
+    </div>
+  </div> 
+</form>
+

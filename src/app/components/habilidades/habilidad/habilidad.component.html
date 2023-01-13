@@ -1,0 +1,52 @@
+<app-formuhabilidad-agregar
+  *ngIf="hasRoute('/dashboard')"
+  (onAddSkill)="addSkill($event)"
+>
+</app-formuhabilidad-agregar>
+<!--Habilidades-->
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-8">
+    <div class="card text-bg-rosa mb-3 bordeCarrusel">
+      <div class="card-header fs-4 text-center">Habilidades</div>
+      <div class="card-body">
+        <div class="card mb-3">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="d-flex justify-content-between flex-wrap">
+                <div *ngFor="let habilidad of habilidades">
+                  <p>{{ habilidad.name }}</p>
+                  <div
+                    class="barra mx-auto"
+                    role="progressbar"
+                    [attr.aria-valuenow]="habilidad.val"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="--value:{{ habilidad.val }}"
+                  ></div>
+                  <div class="mb-3" *ngIf="hasRoute('/dashboard')">
+                    <button
+                      type="button"
+                      class="btn btn-danger"
+                      (click)="deleteHabilidad(habilidad.id)"
+                    >
+                      Eliminar
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      routerLink="/formuhabilidad-editar/{{ habilidad.id }}"
+                    >
+                      Editar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-2"></div>
+  </div>
+</div>

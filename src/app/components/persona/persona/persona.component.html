@@ -1,0 +1,41 @@
+<div class="modal-content" *ngIf="hasRoute('/dashboard') && isLogged">
+  <div class="text-center text-bg-rosa">
+    <h5 class="fs-3">Información</h5>
+  </div>
+</div>
+<section class="modal-content">
+  <div class="banner">
+    <img class="modal-content banner" [src]="personas.backImage" alt="banner" />
+  </div>
+  <h1 class="text-center bajar text-white position-relative">
+    <span style="--l: 'Desarrollador Web Full Stack Jr'">{{
+      personas.title
+    }}</span>
+  </h1>
+  <div class="container-fluid position-relative text-center mt-5">
+    <div class="row position-relative">
+      <div class="col-6 col-sm-3 col-md-3 col-lg-2 col-xl-2 col-xxl-2">
+        <img [src]="personas.photo" alt="fotografia" class="foto img-fluid" />
+      </div>
+      <div
+        class="col-6 col-sm-9 col-md-9 col-lg-10 col-xl-10 col-xxl-10 align-self-end text-center"
+      >
+        <h3 class="text-center neon fs-8 mt-5 pt-5">{{ personas.about }}</h3>
+      </div>
+      <div class="col-md-4 text-start text-wrap">
+        <h2>{{ personas.name }}</h2>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div *ngIf="hasRoute('/dashboard') && isLogged">
+        <button
+          type="button"
+          class="btn btn-primary"
+          routerLink="/formupersona-editar/{{ personas.id }}"
+        >
+          Editar
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

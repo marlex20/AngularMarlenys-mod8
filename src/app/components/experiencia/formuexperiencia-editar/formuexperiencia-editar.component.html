@@ -1,0 +1,99 @@
+<div class="row" *ngIf="expExperiencia && isLogged">
+  <div class="col-2"></div>
+  <div class="col-sm-8">
+    <form
+      (ngSubmit)="onUpdate()"
+      #eduForm="ngForm"
+      novalidate
+      
+    >
+      <div class="modal-content">
+        <div class="text-center text-bg-rosa">
+          <h5 class="fs-3">Experiencia Laboral</h5>
+        </div>
+        <div class="container text-start">
+          <div class="row my-1">
+            <div class="col-6 col-sm-6 col-md-3 mb-2">
+              <label for="image" class="form-label"
+                >Logo de la empresa</label
+              >
+            </div>
+            <div class="col-6 col-sm-6 col-md-9 mb-2">
+              <input
+                class="form-control"
+                name="image"
+                id="image"
+                type="text"
+                [(ngModel)]="expExperiencia.image"
+              />
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 mb-2">
+              <label for="name" class="form-label"
+                >Nombre de la empresa</label
+              >
+            </div>
+            <div class="col-6 col-sm-6 col-md-9 mb-2">
+              <textarea
+                class="form-control"
+                name="name"
+                id="name"
+                type="text"
+                rows="1"
+                required
+                [(ngModel)]="expExperiencia.name"
+              ></textarea>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 mb-2">
+              <label for="title" class="form-label">Titulo del cargo</label>
+            </div>
+            <div class="col-6 col-sm-6 col-md-9 mb-2">
+              <textarea
+                class="form-control"
+                name="title"
+                id="title"
+                type="text"
+                rows="1"
+                required
+                [(ngModel)]="expExperiencia.title"
+              ></textarea>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 mb-2">
+              <label for="description" class="form-label"
+                >Descripción del cargo</label
+              >
+            </div>
+            <div class="col-6 col-sm-6 col-md-9 mb-2">
+              <textarea
+                class="form-control"
+                name="description"
+                id="description"
+                type="text"
+                rows="1"
+                required
+                [(ngModel)]="expExperiencia.description"
+              ></textarea>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3">
+              <label for="date" class="form-label">Periodo</label>
+            </div>
+            <div class="col-6 col-sm-6 col-md-9">
+              <textarea
+                class="form-control"
+                name="date"
+                id="date"
+                type="text"
+                rows="1"
+                required
+                [(ngModel)]="expExperiencia.date"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer text-bg-rosa">
+          <button type="submit" class="btn btn-primary">Actualizar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="col-2"></div>
+</div>

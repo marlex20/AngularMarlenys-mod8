@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { TokenService } from 'src/app/servicio/token.service';
 
 @Component({
   selector: 'app-botonlogout',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BotonlogoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private tokenService: TokenService, private router: Router) { }
 
   ngOnInit(): void {
+  }
+  onLogout(): void {
+    this.tokenService.logOut();      
+    window.location.reload();
+    this.router.navigate(['/entrada']);
   }
 
 }
