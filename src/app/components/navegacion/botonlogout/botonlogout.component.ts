@@ -16,7 +16,7 @@ export class BotonlogoutComponent implements OnInit {
   onLogout(): void {
     this.tokenService.logOut();      
     window.location.reload();
-    this.router.navigate(['/entrada']);
+    this.router.navigate(['/home']);
   }
 
 }

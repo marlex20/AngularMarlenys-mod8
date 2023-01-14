@@ -4,62 +4,61 @@
 >
 </app-formuexperiencia-agregar>
 <!--Experiencia Laboral-->
-  <div class="carousel-dark">
-    <div class="row">
-      <div class="col-2"></div>
-      <div class="col-8">
-        <div class="card text-bg-rosa mb-3 bordeCarrusel">
-          <div class="card-header fs-4 text-center">Experiencia Laboral</div>
-          <div class="card-body">
-            <ngb-carousel>
-              <ng-template ngbSlide *ngFor="let experiencia of experienciaList">
-                <div class="card mb-3 carousel-inner">
-                  <div class="row g-0">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-3 align-self-center">
-                      <img
-                        [src]="experiencia.image"
-                        alt="logo"
-                        class="img-fluid roundefloat-start"
-                      />
+<div class="carousel-dark">
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <div class="card text-bg-rosa mb-3 bordeCarrusel">
+        <div class="card-header fs-4 text-center">Experiencia Laboral</div>
+        <div class="card-body">
+          <ngb-carousel>
+            <ng-template ngbSlide *ngFor="let experiencia of experienciaList">
+              <div class="card mb-3 carousel-inner">
+                <div class="row g-0">
+                  <div class="col-md-2"></div>
+                  <div class="col-md-3 align-self-center">
+                    <img
+                      [src]="experiencia.image"
+                      alt="logo"
+                      class="img-fluid roundefloat-start"
+                    />
+                  </div>
+                  <div class="col-md-5">
+                    <div class="card-body text-center">
+                      <h5 class="card-title">{{ experiencia.name }}</h5>
+                      <p class="card-text">
+                        <strong> {{ experiencia.title }}</strong><br/>
+                        {{ experiencia.description }} <br/>
+                        {{ experiencia.date }}
+                      </p>
                     </div>
-                    <div class="col-md-5">
-                      <div class="card-body text-center">
-                        <h5 class="card-title">{{ experiencia.name }}</h5>
-                        <p class="card-text">
-                          {{ experiencia.title }} <br />
-                          {{ experiencia.description }} <br />
-                          {{ experiencia.date }}
-                        </p>
-                      </div>
-                      <div class="mb-3" *ngIf="hasRoute('/dashboard')">
-                        <button
-                          type="button"
-                          class="btn btn-danger"
-                          (click)="deleteExperiencia(experiencia.id)"
-                        >
-                          Eliminar
-                        </button>
-                        <button
-                          type="button"
-                          class="btn btn-primary"
-                          routerLink="/formuexperiencia-editar/{{ experiencia.id }}"
-                        >
-                          Editar
-                        </button>
-                      </div>
-                    </div>
-                    <div class="col-md-2">
+                    <div class="mb-3" *ngIf="hasRoute('/dashboard')">
+                      <button
+                        type="button"
+                        class="btn btn-danger"
+                        (click)="deleteExperiencia(experiencia.id)"
+                      >
+                        Eliminar
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        routerLink="/formuexperiencia-editar/{{
+                          experiencia.id
+                        }}"
+                      >
+                        Editar
+                      </button>
                     </div>
                   </div>
+                  <div class="col-md-2"></div>
                 </div>
-              </ng-template>
-            </ngb-carousel>
-            
-          </div>
-        </div> 
+              </div>
+            </ng-template>
+          </ngb-carousel>
+        </div>
       </div>
-      <div class="col-2"></div>
-    </div>  
+    </div>
+    <div class="col-2"></div>
   </div>
-  
+</div>
